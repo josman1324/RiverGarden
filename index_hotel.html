@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>River Garden</title>
+  <link rel="stylesheet" href="Styles_Hotel.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+
+<body>
+
+  <header>
+   <nav class="navbar-centered">
+  <ul class="nav-group left">
+    <li><a href="#inicio">INICIO</a></li>
+    <li><a href="#hospedaje">HOSPEDAJE</a></li>
+    <li><a href="#actividades">ACTIVIDADES</a></li>
+  </ul>
+
+  <a href="#inicio" class="logo-centered">
+    <img src="img/logo2.png" alt="River Garden logo">
+  </a>
+
+  <ul class="nav-group right">
+    <li><a href="#restaurante">RESTAURANTE</a></li>
+    <li><a href="#reservas">RESERVAS</a></li>
+    <li><a href="contacto.html">CONTACTO</a></li>
+  </ul>
+
+  <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+</nav>
+
+  </header>
+  
+
+<!-- Carrusel de imagenes inicio -->
+
+  <section class="hero" id="inicio">
+    <div class="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-slide active">
+          <img src="img/img1.JPG" alt="Hotel Pool" />
+          <div class="hero-content">
+            <h2>RIVER GARDEN HOTEL</h2>
+            <h1>UN LUGAR MÁGICO</h1>
+            <a href="#reservas" class="hero-btn">Haz tu reserva</a>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="img/img2.jpg" alt="Hotel Garden" />
+          <div class="hero-content">
+            <h2>RIVER GARDEN HOTEL</h2>
+            <h1>NATURALEZA Y CONFORT</h1>
+            <a href="#reservas" class="hero-btn">Haz tu reserva</a>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="img/img 3.jpg" alt="Hotel Restaurant" />
+          <div class="hero-content">
+            <h2>RIVER GARDEN HOTEL</h2>
+            <h1>GASTRONOMÍA EXQUISITA</h1>
+            <a href="#reservas" class="hero-btn">Haz tu reserva</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   
+
+  <section class="about">
+    <div class="container">
+      <h2>Sobre River Garden</h2>
+      <p>Un refugio natural donde la comodidad y la naturaleza se encuentran. Desde 2025, ofrecemos una experiencia mágica para parejas, familias y aventureros.</p>
+    </div>
+  </section>
+
+  <section class="featured-rooms" id="hospedaje">
+    <div class="room-container">
+  
+      <!-- Habitación Individual -->
+      <div class="room-item">
+        <div class="room-image">
+          <img src="img/hab1.jpg" alt="Habitación Individual" />
+        </div>
+        <div class="room-details blue-bg">
+          <h3 class="room-title">Individual</h3>
+          <p class="room-description">Ideal para una persona. Confort y privacidad asegurados.</p>
+          <a href="reservas.html" class="btn-learn-more blue-btn">Leer más</a>
+        </div>
+      </div>
+  
+      <!-- Habitación Pareja -->
+      <div class="room-item">
+        <div class="room-image">
+          <img src="img/hab2.jpg" alt="Habitación Pareja" />
+        </div>
+        <div class="room-details blue-bg">
+          <h3 class="room-title">Pareja</h3>
+          <p class="room-description">Perfecta para dos. Espacio acogedor y romántico.</p>
+          <a href="reservas.html" class="btn-learn-more blue-btn">Leer más</a>
+        </div>
+      </div>
+  
+      <!-- Habitación Triple -->
+
+      <div class="room-item">
+        <div class="room-image">
+          <img src="img/hab1.jpg" alt="Habitación Triple" />
+        </div>
+        <div class="room-details blue-bg">
+          <h3 class="room-title">Triple</h3>
+          <p class="room-description">Cómoda para tres personas, ideal para amigos o familia pequeña.</p>
+          <a href="reservas.html" class="btn-learn-more blue-btn">Leer más</a>
+        </div>
+      </div>
+  
+      <!-- Habitación Familiar -->
+
+      <div class="room-item">
+        <div class="room-image">
+          <img src="img/hab2.jpg" alt="Habitación Familiar" />
+        </div>
+        <div class="room-details blue-bg">
+          <h3 class="room-title">Familiar</h3>
+          <p class="room-description">Espacio amplio y cómodo para toda la familia.</p>
+          <a href="reservas.html" class="btn-learn-more blue-btn">Leer más</a>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+<!-- seccion de actividades dentro del hotel -->
+
+  <section class="media-gallery" id="actividades">
+    <h2>Explora Nuestro Espacio</h2>
+    <div class="media-pair-grid">
+      <div class="media-pair">
+        <h3 class="media-title">Piscina</h3>
+        <div class="media-item"><img src="img/piscinaimagen.jpg" alt="Piscina" /></div>
+        <div class="media-item"><video controls src="img/piscinavid.MOV"></video></div>
+      </div>
+      <div class="media-pair">
+        <h3 class="media-title">Restaurante</h3>
+        <div class="media-item"><img src="img/restauranteimage.JPG" alt="Restaurante" /></div>
+        <div class="media-item"><video controls src="img/restaurantevid.MOV"></video></div>
+      </div>
+      <div class="media-pair">
+        <h3 class="media-title">Arenero Infantil</h3>
+        <div class="media-item"><img src="img/img2.jpg" alt="Arenero" /></div>
+        <div class="media-item"><video controls src="img/arenerovid.MOV"></video></div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- botones de las redes sociales -->
+
+  <div class="social-sidebar">
+    <a href="https://www.instagram.com/rivergarden_huila/" target="_blank" class="social-icon instagram" title="Síguenos en Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://web.facebook.com/profile.php?id=61574870573986" target="_blank" class="social-icon facebook" title="Dale Me Gusta en Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+  </div>
+    <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/573152528546" class="whatsapp-float" target="_blank" title="Escríbenos por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <footer class="main-footer">
+  <div class="footer-contact-section">
+    <h2 class="footer-title">CONTÁCTANOS</h2>
+    <div class="footer-grid">
+      <div class="footer-column">
+        <h3>Ubicación</h3>
+        <p>VIA TERMALES,  A 150 MTS DEL PARQUE PRINCIPAL DE RIVERA<br>HUILA, COLOMBIA</p>
+        <h3>Teléfono</h3>
+        <p><a href="tel:+573186021195">+57 318 6021195</a></p>
+        <h3>Correo</h3>
+        <p><a href="mailto:rivergardenhotel@gmail.com">rivergardenhotel@gmail.com</a></p>
+      </div>
+      <div class="footer-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13404.303886350666!2d-75.26889299579491!3d2.7798305313669704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3b6c1c0bfcda75%3A0x8b3bec7b63590553!2sCra.%202%20%23%204-42%2C%20Rivera%2C%20Huila!5e0!3m2!1ses-419!2sco!4v1747436596703!5m2!1ses-419!2sco"
+          width="100%" height="270px" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-logo">
+    <img src="img/logo2.png" alt="Logo River Garden" />
+  </div>
+
+  <div class="footer-links-row">
+    <a href="#inicio">INICIO</a>
+    <a href="#hospedaje">HOSPEDAJE</a>
+    <a href="#actividades">ACTIVIDADES</a>
+    <a href="#reservas">RESERVAS</a>
+    <a href="#contacto">CONTACTO</a>
+  </div>
+
+  <div class="footer-legal-links">
+    <a href="#" class="modal-trigger" data-modal="cookieModal">Política de Cookies</a>
+    <a href="#" class="modal-trigger" data-modal="privacyModal">Política de Privacidad</a>
+    <a href="#" class="modal-trigger" data-modal="legalModal">Aviso Legal</a>
+  </div>
+
+  <div class="footer-copy">
+    <p>Rechazamos la Explotación Sexual Comercial de Niñas, Niños y Adolescentes (ESCNNA) y estamos comprometidos con la Ley 1336 y 1329 de 2009.</p>
+    <p>Hotel River Garden – RNT: 89578. No aceptamos mascotas.</p>
+  </div>
+</footer>
+
+
+
+ <script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navbar = document.querySelector('.navbar-centered');
+
+  toggle.addEventListener('click', () => {
+    navbar.classList.toggle('expanded');
+  });
+</script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const slides = document.querySelectorAll('.carousel-slide');
+      let currentSlide = 0;
+      function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+      }
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+      setInterval(nextSlide, 5000);
+    });
+  </script>
+
+<div class="cookie-banner" id="cookieBanner">
+  <p>Este sitio utiliza cookies para garantizar la mejor experiencia de usuario. <a href="#" class="cookie-link" id="openModal">Más información</a>
+  </p>
+  <div class="cookie-actions">
+    <button id="acceptCookies">Aceptar</button>
+    <button id="declineCookies">Rechazar</button>
+  </div>
+</div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const banner = document.getElementById('cookieBanner');
+      const acceptBtn = document.getElementById('acceptCookies');
+      const declineBtn = document.getElementById('declineCookies');
+  
+      if (!localStorage.getItem('cookieConsent')) {
+        banner.style.display = 'flex';
+      }
+  
+      acceptBtn.addEventListener('click', () => {
+        localStorage.setItem('cookieConsent', 'accepted');
+        banner.style.display = 'none';
+      });
+  
+      declineBtn.addEventListener('click', () => {
+        localStorage.setItem('cookieConsent', 'declined');
+        banner.style.display = 'none';
+      });
+    });
+
+
+  </script>
+
+<!-- Modal de Política de Cookies -->
+<div class="cookie-modal" id="cookieModal">
+  <div class="cookie-modal-content">
+    <span class="close-modal" id="closeModal">&times;</span>
+    <h2>Política de Cookies</h2>
+    <p>En River Garden Hotel utilizamos cookies para mejorar tu experiencia, analizar el tráfico y ofrecer contenidos personalizados.</p>
+    <h3>¿Qué son las cookies?</h3>
+    <p>Son archivos pequeños que se almacenan en tu navegador. Ayudan a recordar tus preferencias y mejoran la navegación.</p>
+    <h3>Tipos de cookies</h3>
+    <ul>
+      <li><strong>Técnicas:</strong> necesarias para el funcionamiento del sitio.</li>
+      <li><strong>De análisis:</strong> nos permiten mejorar mediante estadísticas.</li>
+      <li><strong>De terceros:</strong> como redes sociales o servicios externos.</li>
+    </ul>
+    <p>Puedes gestionar tus cookies desde este aviso o configurando tu navegador.</p>
+  </div>
+</div>
+<!-- Modal de Política de Privacidad -->
+<div class="cookie-modal" id="privacyModal">
+  <div class="cookie-modal-content">
+    <span class="close-modal" data-close="privacyModal">&times;</span>
+    <h2>Política de Privacidad</h2>
+    <p>Tu privacidad es importante para nosotros. Recopilamos y tratamos tus datos personales únicamente con tu consentimiento y con fines legítimos como reservas, atención al cliente o mejora de nuestros servicios.</p>
+    <h3>¿Qué datos recopilamos?</h3>
+    <ul>
+      <li>Nombre, correo electrónico y teléfono.</li>
+      <li>Información de reservas.</li>
+      <li>Preferencias y uso del sitio web (de forma anónima).</li>
+    </ul>
+    <h3>¿Cómo protegemos tu información?</h3>
+    <p>Aplicamos medidas de seguridad técnicas y organizativas para evitar el acceso no autorizado, uso indebido o pérdida de los datos.</p>
+    <p>En cualquier momento puedes solicitar el acceso, modificación o eliminación de tus datos personales.</p>
+  </div>
+</div>
+
+<!-- Modal de Aviso Legal -->
+<div class="cookie-modal" id="legalModal">
+  <div class="cookie-modal-content">
+    <span class="close-modal" data-close="legalModal">&times;</span>
+    <h2>Aviso Legal</h2>
+    <p>Este sitio web es propiedad de River Garden Hotel. Todos los contenidos (textos, imágenes, diseño, etc.) están protegidos por derechos de autor y no pueden ser reproducidos sin autorización expresa.</p>
+    <p>El uso del sitio implica la aceptación de las condiciones de uso aquí establecidas. River Garden Hotel se reserva el derecho de modificar la información sin previo aviso.</p>
+    <p>Para consultas legales, contáctenos a través de nuestra sección de contacto.</p>
+  </div>
+</div>
+<script> const modal = document.getElementById('cookieModal');
+  const openModal = document.getElementById('openModal');
+  const closeModal = document.getElementById('closeModal');
+  
+  openModal.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.style.display = 'flex';
+  });
+  
+  closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+  
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+  document.querySelectorAll('.modal-trigger').forEach(trigger => {
+  trigger.addEventListener('click', function (e) {
+    e.preventDefault();
+    const modalId = this.getAttribute('data-modal');
+    document.getElementById(modalId).style.display = 'flex';
+  });
+});
+
+document.querySelectorAll('.close-modal').forEach(btn => {
+  btn.addEventListener('click', function () {
+    const modalId = this.getAttribute('data-close');
+    document.getElementById(modalId).style.display = 'none';
+  });
+});
+
+window.addEventListener('click', function (e) {
+  document.querySelectorAll('.cookie-modal').forEach(modal => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+});
+
+  </script>
+</body>
+</html>

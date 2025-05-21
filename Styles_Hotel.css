@@ -1,0 +1,717 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales del documento */
+html, body {
+  overflow-x: hidden;
+  font-family: 'Lora', serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+}
+
+
+.navbar-centered {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  background-color: #69a6e4;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  
+}
+
+.navbar-centered .logo-centered img {
+  height: 100px;
+  width: 250px;
+  margin: 0 50px;
+  object-fit:cover;
+}
+
+.nav-group {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-group li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 1030px) {
+  .nav-group,
+  .logo-centered {
+    display: none;
+  }
+
+  .navbar-centered.expanded .nav-group,
+  .navbar-centered.expanded .logo-centered {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-group li {
+    padding: 0.5rem 0;
+  }
+}
+
+/* ==== SECCIÓN DE CARRUSEL DE INICIO ==== */
+.hero {
+  margin-top: 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.carousel-inner {
+  display: flex;
+  height: 100%;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  display: none;
+  position: relative;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-slide img {
+
+  height: 100vh;
+  object-fit: cover;
+  width: 100%;
+  object-position: 50% 53%;
+}
+
+/* Capa oscura encima de las imágenes para resaltar el texto */
+.carousel-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4));
+  z-index: 1;
+}
+
+/* Contenido de texto encima del carrusel */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  max-width: 800px;
+  width: 90%;
+}
+
+.hero-content h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9), 0px 3px 8px rgba(0, 0, 0, 0.8);
+  letter-spacing: 1px;
+}
+
+/* Botón de llamada a la acción */
+.hero-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #ff4d4d;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hero-btn:hover {
+  background-color: #cc0000;
+}
+
+
+/* ==== SECCIÓN "SOBRE NOSOTROS" ==== */
+.about {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 32px;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 18px;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+/* ==== SECCIÓN DE HABITACIONES DESTACADAS ==== */
+.featured-rooms {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+  background-color: #f5f5f5;
+}
+
+/* Grid contenedor de habitaciones */
+.room-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+ padding: 0 20px;
+  
+}
+
+/* Tarjeta individual de habitación */
+.room-item {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  background-color: #f0f6fc;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.room-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagen de la habitación */
+.room-image img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  
+}
+
+/* Información debajo de la imagen */
+.room-details {
+  padding:30px;
+  text-align: center;
+}
+
+/* Fondo azul para tarjetas */
+.blue-bg {
+  background-color: #003366;
+  color: white;
+height: 500px;
+}
+
+.room-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.room-description {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Texto aclarado para fondo azul */
+.blue-bg .room-description {
+  color: #e0e0e0;
+}
+
+/* Botón de “Leer más” */
+.btn-learn-more {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #ff4d4d;
+  color: #ff4d4d;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-learn-more:hover {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+/* Variación de botón en fondo azul */
+.blue-btn {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.blue-btn:hover {
+  background-color: #ffffff;
+  color: #003366;
+}
+
+
+/* ==== galeria multimedia de las actividades del hotel ==== */
+.media-gallery {
+  padding: 60px 0;
+  background-color: #eaf4ff;
+  text-align: center;
+}
+
+.media-gallery h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #003366;
+}
+
+.media-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+/* Grid de pares de multimedia */
+.media-pair-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0 40px;
+}
+
+/* Cada par: título + imagen + video */
+.media-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Estilo para cada imagen o video */
+.media-item {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  aspect-ratio: 16 / 9;
+}
+
+.media-item img,
+.media-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  background-color: black;
+  display: block;
+}
+
+
+/* ==== iconos de redes sociales  ==== */
+.social-sidebar {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+/* Estilos base para cada icono */
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  background-color: #333;
+  color: white;
+  font-size: 20px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateX(-5px);
+  background-color: #ff4d4d;
+}
+
+/* Colores personalizados */
+.instagram { background-color: #e1306c; }
+.facebook { background-color: #3b5998; }
+
+
+/* ==== DISEÑO RESPONSIVO ==== */
+/* Ajustes para pantallas medianas */
+@media (max-width: 1024px) {
+  .room-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .media-pair-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .carousel-slide img {
+    height: 400px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content h2 {
+    font-size: 24px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+  }
+
+  .room-container {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .social-sidebar {
+    padding: 5px;
+  }
+
+  .social-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+}
+
+/* ==== Botón flotante de WhatsApp ==== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  font-size: 32px;
+  padding: 15px;
+  border-radius: 50%;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #1ebe5d;
+}
+
+/* ==== Botón WhatsApp en sección de contacto ==== */
+.btn-whatsapp-contact {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #25d366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-whatsapp-contact:hover {
+  background-color: #1ebe5d;
+}
+
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: #003366;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.cookie-banner p {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.cookie-link {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.cookie-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#acceptCookies {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+#acceptCookies:hover {
+  background-color: #cc0000;
+}
+
+#declineCookies {
+  background-color: #ffffff;
+  color: #003366;
+  border: 1px solid #003366;
+}
+
+#declineCookies:hover {
+  background-color: #003366;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Modal de cookies */
+.cookie-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.cookie-modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  color: #333;
+}
+
+.cookie-modal-content h2 {
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.cookie-modal-content h3 {
+  color: #003366;
+  margin-top: 20px;
+}
+
+.cookie-modal-content ul {
+  margin-left: 20px;
+  line-height: 1.6;
+}
+
+.cookie-modal-content p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-modal:hover {
+  color: #ff4d4d;
+}
+
+
+
+
+.main-footer {
+  background-color: #111;
+  color: #eee;
+  padding: 60px 20px 30px;
+  font-family: 'Lora', serif;
+}
+
+.footer-title {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1 1 300px;
+  color: #ddd;
+}
+
+.footer-column h3 {
+  color: #ffd700;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.footer-column p,
+.footer-column a {
+  margin: 5px 0;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.footer-column a:hover {
+  color: #ff4d4d;
+}
+
+.footer-map {
+  flex: 1 1 400px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.footer-logo {
+  text-align: center;
+  margin: 50px 0 30px;
+}
+
+.footer-logo img {
+  width: 160px;
+  height: auto;
+}
+
+.footer-links-row,
+.footer-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin: 15px 0;
+}
+
+.footer-links-row a,
+.footer-legal-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links-row a:hover,
+.footer-legal-links a:hover {
+  color: #ff4d4d;
+}
+
+.footer-copy {
+  text-align: center;
+  color: #aaa;
+  font-size: 13px;
+  margin-top: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links-row,
+  .footer-legal-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+

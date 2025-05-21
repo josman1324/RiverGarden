@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reserva tu habitación</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #f1f8ff);
+    }
+
+    .reservation-form {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 600px;
+      margin: 60px auto;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .reservation-form:hover {
+      transform: translateY(-5px);
+    }
+
+    .reservation-form h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: #0d47a1;
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group select {
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: #2196f3;
+      outline: none;
+    }
+
+    .btn-submit {
+      padding: 15px;
+      background: linear-gradient(135deg, #2196f3, #64b5f6);
+      border: none;
+      color: white;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background: linear-gradient(135deg, #1976d2, #42a5f5);
+    }
+
+    @media (max-width: 600px) {
+      .reservation-form {
+        margin: 20px;
+        padding: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="reservation-form">
+    <h2>Reserva tu habitación</h2>
+    <form action="http://localhost/hotel/guardar_reserva.php" method="POST" class="form-container">
+      
+      <div class="form-group">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono">
+      </div>
+
+      <div class="form-group">
+        <label for="fecha_entrada">Fecha de entrada:</label>
+        <input type="date" id="fecha_entrada" name="fecha_entrada" required>
+      </div>
+
+      <div class="form-group">
+        <label for="fecha_salida">Fecha de salida:</label>
+        <input type="date" id="fecha_salida" name="fecha_salida" required>
+      </div>
+
+      <div class="form-group">
+        <label for="habitacion">Tipo de habitación:</label>
+        <select id="habitacion" name="habitacion" required>
+          <option value="">-- Selecciona una opción --</option>
+          <option value="1">Individual</option>
+          <option value="2">Pareja</option>
+          <option value="3">Triple</option>
+          <option value="4">Familiar</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn-submit">Reservar Ahora</button>
+      </div>
+    </form>
+  </section>
